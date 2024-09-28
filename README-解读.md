@@ -1,0 +1,9 @@
+
+FeignProxiesRegistrar
+1. 找到所有带有@FeignClient注解的interface
+2. 为每个interface生成一个实现类,该实现是通过Enhancer生成的.
+3. 这些proxy不仅实现了interface,而且还实现类一个接口FeignProxyController
+4. 然后将这些proxy注册到spring容器中.
+5. 因为FeignProxyController带有@RestController注解,所以这些proxy都带有了@Controller注解.
+6. RequestMappingHandlerMapping这初始化的过程中,从spring容器中找到所有带@Controller/@RequestMapping的类,然后将带有@RequestMapping的方法注册到MappingRegistry中
+7. 上一步的过程与普通的controller注册一样.

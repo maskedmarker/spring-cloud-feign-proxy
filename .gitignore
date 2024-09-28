@@ -1,25 +1,22 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+### javaIgnore template
+# Compiled class file
+*.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# Intellij
+.idea/
 *.iml
-*.ipr
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Eclipse
+.project
+.settings/
+.classpath
+
+# Maven
+target/
+
+# Gradle
+build
+.gradle
+
+#logs
+logs/
